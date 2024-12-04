@@ -43,7 +43,7 @@ const Payments = ({isDark}) => {
     <div className="p-4 sm:p-6 ">
       <div className={`rounded-lg shadow-sm border mb-6 ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
           }`}>
-        <h2 className={`text-lg font-semibold pl-3 text-gray-800 ${isDark? 'text-white' : 'text-black'} mb-4`}>
+        <h2 className={`text-lg font-semibold pt-4 pl-3 text-gray-800 ${isDark? 'text-white' : 'text-black'} mb-4`}>
           Payments
         </h2>
 
