@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-// import { useTheme } from './hooks/lightAndDarkTheme.js';
 import { Menu, Eye, Search, Bell, ChevronLeft, ChevronRight, Download, Sun, Moon } from 'lucide-react'
 import Sidebar from './components/Sidebar.jsx';
 
@@ -47,7 +46,7 @@ function AdminDashboard() {
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} transition-colors duration-300`}>
       <Sidebar isDark={isDark} isSidebarOpen={isSidebarOpen} />
       <div className={`p-4 ${isSidebarOpen ? 'md:ml-64' : ''}`}>
-        {/* Top Bar */}
+    
         <div className="mb-6 flex items-center justify-between">
           <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="md:hidden">
             <Menu className={`w-6 h-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`} />
@@ -87,7 +86,7 @@ function AdminDashboard() {
           </div>
         </div>
 
-        {/* Stats Grid */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           {stats.map((stat, index) => (
             <div key={index} className={`p-6 rounded-lg shadow-sm border ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
@@ -101,7 +100,7 @@ function AdminDashboard() {
           ))}
         </div>
 
-        {/* Recent Tickets Table */}
+  
         <div className={`rounded-lg shadow-sm border mb-6 ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
           }`}>
           <div className={`flex items-center justify-between p-6 border-b ${isDark ? 'border-gray-700' : 'border-gray-200'
@@ -171,7 +170,7 @@ function AdminDashboard() {
           </div>
         </div>
 
-        {/* Additional Information Section */}
+        
         <div className={`rounded-lg shadow-sm border p-6 ${isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
           }`}>
           <h2 className={`text-lg font-semibold mb-4 ${isDark ? 'text-gray-100' : 'text-gray-900'}`}>Additional Information</h2>
