@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import AdminDashboard from './Admin.Dashboard'
 import Dashboard from './Dashboard'
+import Payments from './pages/Payments'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -31,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AdminDashboard isDark={isDark} setIsDark={setIsDark}  toggleTheme={toggleTheme}  />}>
           <Route  index element={<Dashboard isDark={isDark} setIsDark={setIsDark} toggleTheme={toggleTheme}  />} />
-          <Route path="payments" element={<h1>Payments Page</h1>} />
+          <Route path="payments" element={<Payments  isDark={isDark} setIsDark={setIsDark}  toggleTheme={toggleTheme} />} />
           <Route path="manage-admin" element={<h1>Mannge Admin Page</h1>} />
           <Route path="withdrawls" element={<h1>Withdrawls Page</h1>} />
           <Route path="users" element={<h1>Uses Page</h1>} />
