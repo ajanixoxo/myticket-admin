@@ -5,6 +5,11 @@ import Sidebar from './components/Sidebar.jsx';
 
 function AdminDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [sideBar, setSideBar] = useState("-translate-x-full")
+  const handleSideBar = () => {
+      setSideBar(sideBar === '-translate-x-full' ? '' : '-translate-x-full');
+
+  }
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
@@ -44,11 +49,11 @@ function AdminDashboard() {
 
   return (
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'} transition-colors duration-300`}>
-      <Sidebar isDark={isDark} isSidebarOpen={isSidebarOpen} />
+      <Sidebar isDark={isDark} isSidebarOpen={isSidebarOpen} sideBar={sideBar} handleSideBar={handleSideBar}  />
       <div className={`p-4 ${isSidebarOpen ? 'md:ml-64' : ''}`}>
     
         <div className="mb-6 flex items-center justify-between">
-          <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="md:hidden">
+          <button onClick={handleSideBar} className="md:hidden">
             <Menu className={`w-6 h-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`} />
           </button>
           <div className="flex-1 max-w-lg mx-4">
