@@ -4,6 +4,9 @@ import './App.css'
 import AdminDashboard from './Admin.Dashboard'
 import Dashboard from './Dashboard'
 import Payments from './pages/Payments'
+import AdminManagement from './pages/Admin'
+import Withdrawals from './pages/Withdrawals'
+import Users from './pages/Users'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,9 +36,9 @@ function App() {
         <Route path="/" element={<AdminDashboard isDark={isDark} setIsDark={setIsDark}  toggleTheme={toggleTheme}  />}>
           <Route  index element={<Dashboard isDark={isDark} setIsDark={setIsDark} toggleTheme={toggleTheme}  />} />
           <Route path="payments" element={<Payments  isDark={isDark} setIsDark={setIsDark}  toggleTheme={toggleTheme} />} />
-          <Route path="manage-admin" element={<h1>Mannge Admin Page</h1>} />
-          <Route path="withdrawls" element={<h1>Withdrawls Page</h1>} />
-          <Route path="users" element={<h1>Uses Page</h1>} />
+          <Route path="manage-admin" element={<AdminManagement isDark={isDark} />} />
+          <Route path="withdrawls" element={<Withdrawals isDark={isDark} />}  />
+          <Route path="users" element={<Users isDark={isDark}/>} />
           <Route path="settings" element={<h1>Settings Page</h1>} />
 
         </Route>
