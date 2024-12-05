@@ -21,7 +21,7 @@ const Withdrawals = ({ isDark }) => {
       <h2 className="text-xl font-semibold mb-4">Withdrawals Management</h2>
 
       {/* Withdrawals Table */}
-      <table className="w-full">
+      <div className="overflow-x-auto"> <table className="w-full">
         <thead className={isDark ? 'bg-gray-700' : 'bg-gray-50'}>
           <tr>
             <th className={`px-6 py-3 text-left text-xs font-medium uppercase tracking-wider ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -98,7 +98,8 @@ const Withdrawals = ({ isDark }) => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table></div>
+     
     </div>
   );
 };

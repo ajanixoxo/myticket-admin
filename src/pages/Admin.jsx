@@ -23,7 +23,7 @@ const AdminManagement = ({ isDark }) => {
       <h2 className="text-xl font-semibold mb-4">Admin Management</h2>
 
       
-      <div className="mb-6 flex flex-wrap gap-4">
+      <div className="mb-6 flex flex-wrap gap-4 overflow-x-auto">
         <input
           type="text"
           name="name"
@@ -57,7 +57,7 @@ const AdminManagement = ({ isDark }) => {
         </button>
       </div>
 
-      
+      <div className='overflow-x-auto'>
       <table className="w-full">
         <thead className={isDark ? 'bg-gray-700' : 'bg-gray-50'}>
           <tr>
@@ -91,6 +91,7 @@ const AdminManagement = ({ isDark }) => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
